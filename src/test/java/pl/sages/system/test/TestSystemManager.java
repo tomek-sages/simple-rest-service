@@ -23,6 +23,22 @@ public class TestSystemManager
 	}
 
 	@Test
+	public void testPositiveBlankInput()
+	{
+		String result = systemManager.check("");
+		assertThat(result, notNullValue());
+		assertThat(result, is("OK!"));
+	}
+
+	@Test
+	public void testPositiveNullInput()
+	{
+		String result = systemManager.check(null);
+		assertThat(result, notNullValue());
+		assertThat(result, is("OK!"));
+	}
+
+	@Test
 	public void testNegative()
 	{
 		String result = systemManager.check("cba");
