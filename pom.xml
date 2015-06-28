@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.sages</groupId>
     <artifactId>simple-rest-service</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <name>Simple Rest Service</name>
     <description>Simple Rest service</description>
     <packaging>war</packaging>
@@ -43,7 +41,8 @@
         <connection>scm:git:git@github.com:tomek-sages/simple-rest-service.git</connection>
         <developerConnection>scm:git:git@github.com:tomek-sages/simple-rest-service.git</developerConnection>
         <url>scm:git:git@github.com:tomek-sages/simple-rest-service.git</url>
-    </scm>
+      <tag>simple-rest-service-1.0.1</tag>
+  </scm>
 
     <dependencies>
 
