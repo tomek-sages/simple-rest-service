@@ -147,7 +147,11 @@
             <artifactId>jackson-jaxrs-json-provider</artifactId>
             <version>2.4.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-service-description</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
         <!--LOGGING-->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -349,6 +353,16 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>com.smartbear.soapui</groupId>
+                <artifactId>soapui-maven-plugin</artifactId>
+                <version>4.6.1</version>
+                <configuration>
+                    <projectFile>src/test/soapui/simple-rest-service-wadl-soapui-project.xml</projectFile>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -386,5 +400,12 @@
             </plugin>
         </plugins>
     </reporting>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>smartbear-sweden-plugin-repository</id>
+            <url>http://www.soapui.org/repository/maven2/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
