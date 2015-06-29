@@ -31,6 +31,20 @@
     <profiles>
     </profiles>
 
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Temporary Staging Repository</name>
+            <url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+    </distributionManagement>
+
+    <scm>
+        <connection>scm:git:git@github.com:tomek-sages/simple-rest-service.git</connection>
+        <developerConnection>scm:git:git@github.com:tomek-sages/simple-rest-service.git</developerConnection>
+        <url>scm:git:git@github.com:tomek-sages/simple-rest-service.git</url>
+    </scm>
+
     <dependencies>
 
         <dependency>
