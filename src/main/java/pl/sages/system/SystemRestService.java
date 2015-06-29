@@ -18,13 +18,6 @@ public class SystemRestService
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response ping(@QueryParam("input") String input)
 	{
-		// intentional NPE to check findbugs
-		if(StringUtils.isNotBlank(input) && input.equals("NPE"))
-		{
-			String text = null;
-			text.toLowerCase();
-		}
-
 		String result = systemManager.check(input);
 		return result.equals("OK!") ? Response.ok(result).build() :
 				Response.status(Response.Status.BAD_REQUEST).entity(result).build();
